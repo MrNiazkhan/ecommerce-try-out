@@ -8,7 +8,7 @@ const AboutHero: React.FC = () => {
   return (
     <section className="relative w-full h-screen bg-gradient-to-b from-indigo-700 to-indigo-500 text-white overflow-hidden flex items-center justify-center">
       
-      {/* Subtle Animated Shapes */}
+      
       <motion.div
         className="absolute bg-white opacity-5 rounded-full w-48 h-48 top-16 left-10"
         animate={{ y: [0, 30, 0], x: [0, 15, 0] }}
@@ -20,7 +20,7 @@ const AboutHero: React.FC = () => {
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Main Content */}
+      
       <div className="relative max-w-4xl text-center px-6">
         <motion.h1
           className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-wide"
@@ -40,7 +40,7 @@ const AboutHero: React.FC = () => {
           From humble beginnings to becoming a trusted name, our story is about passion, innovation, and people. Meet the minds shaping our vision every day.
         </motion.p>
 
-        {/* CTA Buttons */}
+       
         <motion.div
           className="flex flex-col sm:flex-row justify-center gap-5"
           initial={{ opacity: 0 }}
@@ -63,7 +63,7 @@ const AboutHero: React.FC = () => {
           </motion.button>
         </motion.div>
 
-        {/* Decorative Bottom Line */}
+        
         <motion.div
           className="mt-12 w-24 h-1 bg-white rounded-full opacity-40 mx-auto"
           initial={{ scaleX: 0 }}
@@ -72,7 +72,7 @@ const AboutHero: React.FC = () => {
         />
       </div>
 
-      {/* Optional Illustration */}
+      
       <motion.img
         src="https://www.pngall.com/wp-content/uploads/2016/07/Team-Free-Download-PNG.png"
         alt="Team Illustration"
