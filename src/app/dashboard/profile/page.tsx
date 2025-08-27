@@ -22,35 +22,37 @@ const ProfilePage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">Profile</h1>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center sm:text-left">
+        Profile
+      </h1>
 
       <div className="bg-white rounded-xl p-6 shadow-md space-y-6">
-        
-        <div className="flex items-center gap-6">
-          <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-gray-300">
+        {/* Profile Header */}
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
+          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-gray-300 flex-shrink-0">
             <img
               src="https://randomuser.me/api/portraits/men/32.jpg"
               alt="User Avatar"
               className="w-full h-full object-cover"
             />
           </div>
-          <div>
-            <h2 className="text-xl font-semibold">{user.name}</h2>
-            <p className="text-gray-500">{user.email}</p>
-            <p className="text-gray-500">{location}</p>
+          <div className="text-center sm:text-left">
+            <h2 className="text-lg sm:text-xl font-semibold">{user.name}</h2>
+            <p className="text-gray-500 text-sm sm:text-base">{user.email}</p>
+            <p className="text-gray-500 text-sm sm:text-base">{location}</p>
           </div>
         </div>
 
-      
-        <div className="space-y-4">
+        {/* Profile Form */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-gray-700 font-medium mb-1">Name</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
 
@@ -60,32 +62,32 @@ const ProfilePage: React.FC = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
 
-          <div>
+          <div className="sm:col-span-2">
             <label className="block text-gray-700 font-medium mb-1">Location</label>
             <input
               type="text"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-blue-500"
+              className="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-blue-500 focus:outline-none"
             />
           </div>
         </div>
 
-       
-        <div className="flex justify-between items-center mt-4">
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row justify-between gap-3 mt-4">
           <button
             onClick={handleLogout}
-            className="px-6 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition font-semibold"
+            className="w-full sm:w-auto px-6 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition font-semibold"
           >
             Logout
           </button>
           <button
             onClick={() => alert("Profile updated! (frontend only)")}
-            className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition font-semibold"
+            className="w-full sm:w-auto px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition font-semibold"
           >
             Save Changes
           </button>
